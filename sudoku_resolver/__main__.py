@@ -7,12 +7,17 @@ Created: 01/01/2025
 
 import sys
 
+from sudoku_resolver.src.loader import Loader
+
 
 def main(argv: list[str]):
     """
     Main entrypoint of the program.
     """
-    print("toto")
+    loader = Loader.from_sudoku_number()
+    sudoku = loader.get_sudoku()
+
+    sudoku.display()
 
 
 if __name__ == "__main__":
